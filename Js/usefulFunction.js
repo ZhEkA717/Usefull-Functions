@@ -47,3 +47,25 @@
 // var currTime=new Date();
 // console.log( formatDateTime(currTime) );
 // /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Для вычисления положения элемента относительно левого верхнего угла окна браузера 
+// (не относительно начала документа!) можно использовать метод элемента getBoundingClientRect,
+// который возвращает хэш со свойствами top, left, right, bottom, а в современных браузерах — 
+// также и свойствами width и height.
+var elem = document.getElementById('proba');
+var pos = elem.getBoundingClientRect();
+// теперь pos - хэш вида {left:XXX, top:XXX, right:XXX, bottom:XXX}
+
+// Позицию элемента относительно левого верхнего угла страницы можно получить, 
+// добавив к результату getBoundingClientRect текущую прокрутку окна браузера:
+function getElementPos(elem) {
+    var bbox=elem.getBoundingClientRect();
+    return {
+      left: bbox.left+window.pageXOffset,
+      top: bbox.top+window.pageYOffset
+    };
+  }
+
+  console.log(pos);
