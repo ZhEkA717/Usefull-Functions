@@ -19,6 +19,16 @@
         }
     </style>
     <div id="proba"></div>
+    <div id='RED' style='position: absolute; width: 50px; height: 50px;
+      left: 200px; top: 400px; background-color: red; border-radius: 50%'></div>
+<div id='GREEN' style='position: absolute; width: 20px; height: 20px;
+    background-color: green; border-radius: 50%'></div>
+
+<form name=FPos>
+Расстояние (радиус): <input type=text name=Radius value='100'><br />
+Угол (в градусах): <input type=text name=Angle value='30'><br />
+<input type=button value='позиционировать' onclick='pos()'>
+</form>
     <script src="Js/usefulFunction.js"></script>
 </body>
 </html>
