@@ -73,24 +73,91 @@
 
 //   //////////////////////////////////////////////////////////////////////////////////
 // позициоируем землю относительно солнце на заданное расстояние и угол
-function pos( ) {
+// function pos( ) {
 
-  var red=document.getElementById('RED');
-  var green=document.getElementById('GREEN');
+//   var red=document.getElementById('RED');
+//   var green=document.getElementById('GREEN');
 
-  var form=document.forms.FPos;
-  var radius=parseFloat(form.elements.Radius.value);
-  var angle=parseFloat(form.elements.Angle.value)/180*Math.PI;
+//   var form=document.forms.FPos;
+//   var radius=parseFloat(form.elements.Radius.value);
+//   var angle=parseFloat(form.elements.Angle.value)/180*Math.PI;
 
-  var redCenterX=red.offsetLeft+red.offsetWidth/2;
-  var redCenterY=red.offsetTop+red.offsetHeight/2;
+//   var redCenterX=red.offsetLeft+red.offsetWidth/2;
+//   var redCenterY=red.offsetTop+red.offsetHeight/2;
 
-  var greenCenterX=redCenterX+radius*Math.sin(angle);
-  var greenCenterY=redCenterY-radius*Math.cos(angle);
+//   var greenCenterX=redCenterX+radius*Math.sin(angle);
+//   var greenCenterY=redCenterY-radius*Math.cos(angle);
 
-  green.style.left=Math.round(greenCenterX-green.offsetWidth/2)+'px';
-  green.style.top=Math.round(greenCenterY-green.offsetHeight/2)+'px';
-}
+//   green.style.left=Math.round(greenCenterX-green.offsetWidth/2)+'px';
+//   green.style.top=Math.round(greenCenterY-green.offsetHeight/2)+'px';
+// }
 
-pos();
+// pos();
 //   //////////////////////////////////////////////////////////////////////////////////
+
+// //////////////////////////////////////////////////////////////////////////////////
+// позиция элемента оносительно веб страницы
+// function getElementPos(elem) {
+//   var bbox=elem.getBoundingClientRect();
+//   return {
+//       left: bbox.left+window.pageXOffset,
+//       top: bbox.top+window.pageYOffset
+//   };
+// }
+// console.log(getElementPos(document.getElementById('proba')));
+// //////////////////////////////////////////////////////////////////////////////////
+
+// // получение целевого элемента события
+// // EO - объект события
+// function getEventElement(EO) {
+//   if ( window.event && window.event.srcElement )
+//     return window.event.srcElement;
+
+//   if ( EO.target )
+//     return EO.target;
+
+//   return null;
+// }
+
+// // остановка распространения события
+// // EO - объект события
+// function stopPropagation(EO) {
+//   if ( EO.stopPropagation )
+//     EO.stopPropagation();
+//   else
+//     EO.cancelBubble=true;
+// }
+
+// // отмена обработки события по умолчанию
+// // EO - объект события
+// function preventDefault(EO) {
+//   if ( EO.preventDefault )
+//     EO.preventDefault(); 
+//   else
+//     EO.returnValue=false;
+// }
+
+// // получение нажатой кнопки мыши
+// // EO - объект события
+// function getMouseWhich(EO) {
+//   if ( EO.which ) return EO.which;
+//   if ( EO.button&1 ) return 1;
+//   if ( EO.button&4 ) return 2;
+//   if ( EO.button&2 ) return 3;
+//   return 0;
+// }
+
+// // получение нажатого на клавиатуре символа
+// // EO - объект события
+// function getKeyboardChar(EO) {
+//   if ( EO.which==null ) {  // IE
+//     if ( EO.keyCode<32) return null; // управляющая клавиша
+//     return String.fromCharCode(EO.keyCode); // печатный символ
+//   }
+//   if ( EO.which!=0 && EO.charCode!=0 ) {  // остальные браузеры
+//     if ( EO.which<32 ) return null; // управляющая клавиша
+//     return String.fromCharCode(EO.which); // печатный символ
+//   }
+//   return null; // управляющая клавиша
+// }
+
