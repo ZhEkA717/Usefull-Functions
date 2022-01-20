@@ -1,5 +1,6 @@
 {
 	"camelcase" : true,
+	"document" :true,
 	"indent": 2,
 	"undef": true,
 	"quotmark": false,
