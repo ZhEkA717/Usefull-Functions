@@ -48,8 +48,6 @@
 // console.log( formatDateTime(currTime) );
 // /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-<<<<<<< HEAD
 // // Если необходимо узнать реальный класс объекта, можно использовать следующую функцию:
 // function getClassName(obj) {
 //     if (obj.constructor && obj.constructor.name) {
@@ -101,7 +99,7 @@
 
 //   //////////////////////////////////////////////////////////////////////////////////
 // позициоируем землю относительно солнце на заданное расстояние и угол
-function pos( ) {
+function pos() {
 
   var red=document.getElementById('RED');
   var green=document.getElementById('GREEN');
