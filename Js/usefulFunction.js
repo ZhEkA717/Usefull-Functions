@@ -49,6 +49,34 @@
 // /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+<<<<<<< HEAD
+// // Если необходимо узнать реальный класс объекта, можно использовать следующую функцию:
+// function getClassName(obj) {
+//     if (obj.constructor && obj.constructor.name) {
+//         return obj.constructor.name;
+//     }
+//     var c = Object.prototype.toString.apply(obj);
+//     return c.substring(8, c.length - 1);
+// }
+
+// console.log(getClassName('asdfad'));
+// console.log(getClassName(3));
+// console.log(getClassName(true));
+// console.log(getClassName([1, 2, 3]));
+// console.log(getClassName({ a: 1, b: 2 }));
+// // создадим класс RaceCar
+// function RaceCar(carNum) {
+//     let self = this;
+//     self.num = carNum;
+//     self.toString = function () {
+//         return "racecar num=" + self.num;
+//     };
+// }
+// // создадим объект car3 класса RaceCar
+// let car3 = new RaceCar('6061-IB');
+// // проверим является ли объектом сar3 класса RaceCar
+// console.log(getClassName(car3));
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////
 // //////////////////////////////////////////////////////////////////////////////////////////////////////////
 // // Для вычисления положения элемента относительно левого верхнего угла окна браузера 
 // // (не относительно начала документа!) можно использовать метод элемента getBoundingClientRect,
